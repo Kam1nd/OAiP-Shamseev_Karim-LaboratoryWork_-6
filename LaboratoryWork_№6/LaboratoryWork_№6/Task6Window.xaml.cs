@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace LaboratoryWork__6
 {
-    /// <summary>
-    /// Логика взаимодействия для Task6Window.xaml
-    /// </summary>
     public partial class Task6Window : Window
     {
         public Task6Window()

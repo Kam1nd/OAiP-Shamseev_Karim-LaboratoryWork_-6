@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace LaboratoryWork__6
 {
-    /// <summary>
-    /// Логика взаимодействия для Task2Window.xaml
-    /// </summary>
     public partial class Task2Window : Window, INotifyPropertyChanged
     {
         private string _question;
