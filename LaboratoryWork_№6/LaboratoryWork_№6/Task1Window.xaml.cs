@@ -43,8 +43,11 @@ namespace LaboratoryWork__6
             {
                 double result;
 
-                if (a <= 2)
+                if (a <= 2) 
+                {
                     result = a * a + 4 * a + 5;
+                    ResultTextBlock.Text = $"f({a}) = {result:F4}";
+                }
                 else
                 {
                     double denominator = a * a + 4 * a + 5;
