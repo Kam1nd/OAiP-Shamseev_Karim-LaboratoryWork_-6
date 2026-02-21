@@ -1,0 +1,17 @@
+﻿<Window x:Class="LaboratoryWork__6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryWork__6"
+        mc:Ignorable="d"
+        Title="Лабораторная работа №6" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="400" MaxWidth="300">
+        <Button Margin="0 10" Content="ЛР2.1 - 12 Вычисление значения функции" Click="Task1_Click"></Button>
+        <Button Margin="0 10" Content="ЛР2.2 - 15 Тест по таблице умножения" Click="Task2_Click"></Button>
+        <Button Margin="0 10" Content="ЛР3.1 - 16 Количество локальных минимумов" Click="Task3_Click"></Button>
+        <Button Margin="0 10" Content="ЛР3.2 - 7 Проверка матрицы на симметричность" Click="Task4_Click"></Button>
+        <Button Margin="0 10" Content="ЛР4.3 - 3 Поворот неквадратной матрицы на 90" Click="Task5_Click"></Button>
+        <Button Margin="0 10" Content="ЛР5.1 - 14 Вычисление зарплаты" Click="Task6_Click"></Button>
+    </StackPanel>
+</Window>

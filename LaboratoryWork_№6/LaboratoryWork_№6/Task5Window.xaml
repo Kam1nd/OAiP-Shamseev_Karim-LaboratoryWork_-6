@@ -1,0 +1,54 @@
+﻿<Window x:Class="LaboratoryWork__6.Task5Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LaboratoryWork__6"
+        mc:Ignorable="d"
+        Title="Поворот неквадратной матрицы на 90" Height="650" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="/task5_image.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20" HorizontalAlignment="Center">
+            <TextBlock Text="Строки (M): " VerticalAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="RowsTextBox" Width="60" FontSize="16" Margin="5,0,15,0"/>
+            <TextBlock Text="Столбцы (N): " VerticalAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="ColsTextBox" Width="60" FontSize="16" Margin="5,0,15,0"/>
+            <Button Content="Сгенерировать и повернуть" 
+                    Click="GenerateRandom_Click" 
+                    FontSize="16" Padding="15,5"/>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="Исходная матрица (M×N)" Margin="0,0,20,0">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Grid x:Name="OriginalMatrixGrid"/>
+                </ScrollViewer>
+            </GroupBox>
+
+            <GroupBox Grid.Column="2" Header="Повёрнутая матрица (N×M)" Margin="20,0,0,0">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <Grid x:Name="RotatedMatrixGrid"/>
+                </ScrollViewer>
+            </GroupBox>
+        </Grid>
+
+        <WrapPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="Предыдущее"  FontSize="15" Margin="10" Click="Task5toTask4"></Button>
+            <Button Content="На главную" FontSize="15" Margin="10" Click="MainWindow_Click"></Button>
+            <Button Content="Следующее" FontSize="15" Margin="10" Click="Task5toTask6"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>
