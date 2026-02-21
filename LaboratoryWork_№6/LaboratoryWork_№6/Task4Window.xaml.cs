@@ -113,14 +113,14 @@ namespace LaboratoryWork__6
 
         private void Task4toTask3(object sender, RoutedEventArgs e)
         {
-            var task3Window = new Task2Window();
+            var task3Window = new Task3Window();
             task3Window.Show();
             this.Close();
         }
 
         private void Task4toTask5(object sender, RoutedEventArgs e)
         {
-            var task5Window = new Task2Window();
+            var task5Window = new Task5Window();
             task5Window.Show();
             this.Close();
         }

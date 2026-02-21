@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace LaboratoryWork__6
 {
+
     public partial class Task6Window : Window
     {
         public Task6Window()
@@ -42,16 +43,20 @@ namespace LaboratoryWork__6
             string inputTextDays = InputTextDays.Text;
             string inputTextMonth = InputTextMonth.Text;
             if (double.TryParse(inputTextWage, out double wage))
-            salary.Wage = wage;
+                salary.Wage = wage;
             else
+            {
                 MessageBox.Show("Введите корректный оклад!", "Ошибка",
-                MessageBoxButton.OK, MessageBoxImage.Warning);
+                                MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+               
 
             if ((int.TryParse(inputTextDays, out int days)))
             {
-                if (days >= 32)
+                if (days >= 32 || days <= 0)
                 {
-                    MessageBox.Show("Введите корректные дни! (не больше 31)", "Ошибка",
+                    MessageBox.Show("Введите корректные дни! (не больше 31 и не меньше 1)", "Ошибка",
                                     MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
@@ -59,14 +64,18 @@ namespace LaboratoryWork__6
                 salary.Days = days;
             }
             else
+            {
                 MessageBox.Show("Введите корректные дни!", "Ошибка",
                                 MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+                
 
             if ((int.TryParse(inputTextMonth, out int month)))
             {
-                if (month >=13)
+                if (month >=13 || month <= 0)
                 {
-                    MessageBox.Show("Введите корректный номер месяца! (не больше 12)", "Ошибка",
+                    MessageBox.Show("Введите корректный номер месяца! (не больше 12 и не меньше 1)", "Ошибка",
                                     MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
@@ -74,8 +83,12 @@ namespace LaboratoryWork__6
                 salary.Month = month;
             }
             else
+            {
                 MessageBox.Show("Введите корректный номер месяца!", "Ошибка",
                                 MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+                
 
             ResultTextBlock.Text = $"Ваша зарплата {salary.summa()}";
         }

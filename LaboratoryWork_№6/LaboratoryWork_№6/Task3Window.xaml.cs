@@ -85,7 +85,8 @@ namespace LaboratoryWork__6
             int localMinCount = 0;
             for (int i = 1; i < count - 1; i++)
             {
-                if (array[i] < array[i - 1] && array[i] < array[i + 1])
+                if (array[i] < array[i - 1] && 
+                    array[i] < array[i + 1])
                 {
                     localMinCount++;
                 }
@@ -110,7 +111,7 @@ namespace LaboratoryWork__6
 
         private void Task3toTask4(object sender, RoutedEventArgs e)
         {
-            var task4Window = new Task1Window();
+            var task4Window = new Task4Window();
             task4Window.Show();
             this.Close();
         }
